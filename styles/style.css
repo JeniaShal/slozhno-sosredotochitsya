@@ -1,5 +1,164 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-size: 18px;
+  background-color: var(--bgcolor);
+  font-family: 'IBM Plex mono', sans-serif;
+  background-image: url(../images/cover-image-dark.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+    /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+
+/* @media (width >= 768px) {
+  .page {
+    padding: 20px;
+  } */
+
+
+
+.header {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  gap: 45px;
+  padding: 10px;
+}
+
+.header {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  gap: 45px;
+  padding: 10px;
+}
+
+.header__theme-menu {
+  grid-row: 1;
+  
+}
+
+.header__theme-menu-list{
+  margin-bottom: 11px;
+}
+
+@media (width > 768px) {
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+    }
+
+    .header__theme-menu-list {
+      flex-direction: row;
+    }
+}
+
+.header__theme-menu-item {
+  margin-bottom: 10px;
+  outline: 1px solid rebeccapurple;
+}
+
+.header__theme-menu-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  inline-size: 70px;
+  block-size: 26px;
+  background-color: transparent;
+  color: var(--accent-color);
+  font-size: 18px;
+  font-family: 'IBM Plex mono', sans-serif;
+  border: 1px solid transparent;
+  text-transform: lowercase;
+  box-shadow: none;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+}
+
+.header__headline {
+  grid-row: 2;
+  align-self: center;
+}
+
+.headline-text {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--headline-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 82.5%;
+}
+
+@media (width > 768px) {
+.headline-text {
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  margin-inline-start: -10px;
+}
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--bgcolor);
+}
+
+.header__title-text {
+  grid-row: 3/4;
+  align-self: start;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  padding-top: 2px;
+}
+
+@media (width > 768px) {
+  .header__title-text {
+    max-width: 364px;
+    justify-self: end;
+  }
+  }
+
+.content__headline {
+  display: inline-block;
+  color: var(--accent-color);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  margin: 40px 0 10px;
+}
+
+.content__subheadline{
+  display: inline-block;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.content-paragraph {
+  display: inline-block;
+  color: var(--color);
+  margin-block-end: 10px;
+}
+
+.content__paragraph-link {
+  color: var(--color);
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.content__l3-headline {
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.picture_image {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.picture {
+  margin-block-end: 10px;
 }
