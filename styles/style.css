@@ -319,7 +319,7 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 130%; 
+  line-height: 130%;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -450,7 +450,7 @@
   .picture__container:nth-child(5) {
     grid-row: 3/4;
     grid-column: 2/4;
-  } 
+  }
 }
 
 .footer {
