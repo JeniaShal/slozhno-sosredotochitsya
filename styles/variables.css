@@ -9,4 +9,8 @@
   --accent-color: #FF0070;
   --color: #F1B2CE;
   --headline-color: #DB00FF;
+  --shadow-color: #FF0070;
+  --hover-color: rgba(255, 0, 112, 0.40);
+  --decoration-color: #FF0070;
+  --title-decor-color: #000028;
 }

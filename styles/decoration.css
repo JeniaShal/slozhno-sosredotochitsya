@@ -7,8 +7,8 @@
   inline-size: 25px;
   block-size: 25px;
   background-color: transparent;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--decoration-color);
+  border-right: 1px solid var(--decoration-color);
   position: absolute;
   top: 10px;
   right: 10px;
@@ -21,8 +21,8 @@
   inline-size: 25px;
   block-size: 25px;
   background-color: transparent;
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--decoration-color);
+  border-block-end: 1px solid var(--decoration-color);
   bottom: 10px;
   left: 10px;
   z-index: 1;  
@@ -45,4 +45,35 @@
   border-radius: 50%;
   box-shadow: -0 0 5px 2px currentColor;
   z-index: 2;
+}
+
+@media (width > 430px) {
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+}
+
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+}
+
+  .bulb {
+    top: 20px;
+    right: 30px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+.bulb {
+  display: none;
+}
+}
+
+.page.theme_light .bulb {
+  display: none;
+}
+
+.page.theme_dark  .bulb {
+  display: block;
 }
