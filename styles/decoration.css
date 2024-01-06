@@ -7,8 +7,8 @@
   inline-size: 25px;
   block-size: 25px;
   background-color: transparent;
-  border-top: 1px solid var(--decoration-color);
-  border-right: 1px solid var(--decoration-color);
+  border-block-start: 1px solid var(--decoration-color);
+  border-inline-end: 1px solid var(--decoration-color);
   position: absolute;
   top: 10px;
   right: 10px;

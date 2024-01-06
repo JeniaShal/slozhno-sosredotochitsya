@@ -24,6 +24,7 @@
   --hover-color: rgba(50, 49, 45, 0.40);
   --decoration-color: rgba(50, 49, 45, 0.40);
   --title-decor-color: #353430;
+  --subheadline-color: #353430;
 }
 
 @media (prefers-color-scheme: light) {
@@ -36,6 +37,14 @@
     --hover-color: rgba(50, 49, 45, 0.40);
     --decoration-color: rgba(50, 49, 45, 0.40);
     --title-decor-color: #353430;
+    --subheadline-color: #353430;
+  }
+
+  .page {
+    background-image: url(../images/cover-image-light.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
   }
 }
 
