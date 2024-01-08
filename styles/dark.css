@@ -25,6 +25,7 @@
   --decoration-color: #FF0070;
   --title-decor-color: #000028;
   --subheadline-color: #FF0070;
+  --active-color: #FF0070;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,6 +39,7 @@
     --decoration-color: #FF0070;
     --title-decor-color: #000028;
     --subheadline-color: #FF0070;
+    --active-color: #FF0070;
   }
 
   .page {

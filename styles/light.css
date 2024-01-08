@@ -25,6 +25,7 @@
   --decoration-color: rgba(50, 49, 45, 0.40);
   --title-decor-color: #353430;
   --subheadline-color: #353430;
+  --active-color: #353430;
 }
 
 @media (prefers-color-scheme: light) {
@@ -38,6 +39,7 @@
     --decoration-color: rgba(50, 49, 45, 0.40);
     --title-decor-color: #353430;
     --subheadline-color: #353430;
+    --active-color: #353430;
   }
 
   .page {
