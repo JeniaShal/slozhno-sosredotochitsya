@@ -351,9 +351,9 @@
 }
 
 .content__paragraph-link {
-  -webkit-appearance: none; 
-  -moz-appearance: none; 
-  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: var(--color);
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-color);
@@ -377,7 +377,7 @@
 }
 
 .content__sub-subheadline {
-  display: inline-block; 
+  display: inline-block;
   width: 100%;
   font-weight: 400;
   font-size: 18px;
