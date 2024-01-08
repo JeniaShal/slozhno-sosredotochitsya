@@ -30,6 +30,7 @@
 
 .bulb {
   color: var(--accent-color);
+  text-transform: uppercase;
   position: absolute;
   top: 10px;
   right: 20px;
@@ -47,7 +48,7 @@
   z-index: 2;
 }
 
-@media (width > 430px) {
+@media (width > 500px) {
   .decorated-zone::before {
     top: 20px;
     right: 20px;
@@ -64,16 +65,3 @@
   }
 }
 
-@media (prefers-color-scheme: light) {
-.bulb {
-  display: none;
-}
-}
-
-.page.theme_light .bulb {
-  display: none;
-}
-
-.page.theme_dark  .bulb {
-  display: block;
-}
