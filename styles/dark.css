@@ -23,7 +23,7 @@
   --active-color: #FF0070;
 }
 
-.bulb.theme_dark {
+.page.theme_dark .bulb {
   display: block;
 }
 
@@ -44,6 +44,10 @@
 
   .bulb {
     display: block;
-  }
+  } 
+
+  .page.theme_light .bulb{
+    display: none;
+  }  
 }
 

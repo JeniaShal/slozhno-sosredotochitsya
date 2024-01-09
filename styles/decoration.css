@@ -1,6 +1,3 @@
-.decorated-zone {
-  position: relative;
-}
 
 .decorated-zone::before {
   content: '';

@@ -27,6 +27,10 @@
   padding-block-end: 10px;
 }
 
+.decorated-zone {
+  position: relative;
+}
+
 .header__theme-menu {
   grid-row: 1;
   align-self: end;
@@ -170,12 +174,6 @@
 }
 }
 
-@media (orientation: landscape) {
-  .header__title {
-    align-self: center;
-  }
-}
-
 .why {
   width: 100%;
   padding-block-start: 40px;
@@ -187,6 +185,7 @@
 .why__headline {
   grid-row: 1;
 }
+
 .content__headline {
   display: flex;
   color: var(--subheadline-color);
@@ -203,7 +202,7 @@
 @media (width > 500px) {
   .why {
     padding-block-start: 60px;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
 
@@ -212,17 +211,11 @@
   }
 
   .why__answer {
-    grid-column: 2;
+    grid-column: 2/4;
     grid-row: 1;
   }
   }
   
-  @media (orientation: landscape) {
-    .why__answer {
-      margin-inline-start: -7px;
-    }
-  }
-
 .what {
   padding-block-start: 40px;
   display: grid;
@@ -296,7 +289,7 @@
 @media (width > 500px) {
   .how {
     padding-block-start: 60px;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
 
@@ -306,17 +299,12 @@
   
   .how__answer {
     grid-row: 1;
-    grid-column: 2;
-  }
-}
-
-@media (orientation: landscape) {
-  .how__answer {
-    margin-inline-start: -7px;
+    grid-column: 2/4;
   }
 }
 
 .content__subheadline {
+  display: flex;
   width: 100%;
   font-size: 18px;
   font-style: normal;
@@ -333,11 +321,14 @@
 }
 
 .content-paragraph {
-  display: inline-block; /*нужен для того, чтобы не "схлопывалисть" марджины"*/
   color: var(--color);
   font-weight: 400;
   line-height: 130%;
   margin-block-end: 10px;
+}
+
+.what .content-paragraph {
+  display: flex;
 }
 
 @media (width > 500px) {
@@ -377,7 +368,7 @@
 }
 
 .content__sub-subheadline {
-  display: inline-block;
+  display: flex;
   width: 100%;
   font-weight: 400;
   font-size: 18px;
@@ -425,7 +416,7 @@
 
 @media(width > 500px) {
   .illustration__subheadline {
-    display: inline-block;
+    display: block;
     margin-block-start: 70px;
     margin-block-end: 20px;
   }
