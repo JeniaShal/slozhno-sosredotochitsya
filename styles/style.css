@@ -18,7 +18,7 @@
 
 .header, .footer {
   height: 100vh;
-  min-height: 668px;
+  min-height: 667px;
   width: 100%;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
@@ -93,7 +93,7 @@
   .header {
     padding-block-start: 20px;
     padding-block-end: 20px;
-    gap:5px;
+    gap:3px;
   }
 
   .header__theme-menu {
@@ -171,23 +171,19 @@
     justify-self: end;
     align-self: center;
     margin-block-start: 0;
-}
+  }
 }
 
 .why {
   width: 100%;
   padding-block-start: 40px;
   display: grid;
-  grid-template-rows: repeat(2 minmax(min-content, max-content));
-  gap: 10px;
-}
-
-.why__headline {
-  grid-row: 1;
+  grid-template-rows: repeat(auto-fill minmax(min-content, max-content));
+  gap: 20px;
 }
 
 .content__headline {
-  display: flex;
+  /* display: flex; */
   color: var(--subheadline-color);
   font-size: 18px;
   font-style: normal;
@@ -195,14 +191,10 @@
   line-height: 130%;
 }
 
-.why__answer {
-  grid-row: 2;
-}
-
 @media (width > 500px) {
   .why {
     padding-block-start: 60px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
   }
 
@@ -210,54 +202,59 @@
     grid-column: 1;
   }
 
-  .why__answer {
-    grid-column: 2/4;
-    grid-row: 1;
+  .why__subheadline {
+    grid-column: 2;
   }
+  }
+
+  @media (orientation: landscape) {
+    .why {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .why__subheadline {
+      grid-column: 2/4;
+    }
   }
   
 .what {
-  padding-block-start: 40px;
+  padding-block-start: 50px;
   display: grid;
-  grid-template-rows: repeat(2, min-content);
-  gap: 10px;
+  grid-template-rows: repeat(auto-fill, min-content);
+  gap: 20px;
 }
 
-.what__headline {
-  grid-row: 1;
-}
-
-.what__answer {
-  grid-row: 2;
-}
 
 @media (width > 500px) {
   .what {
-    padding-block-start: 60px;
-    grid-template-columns: repeat(3, 1fr);
+    padding-block-start: 80px;
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
   }
 
-  .what__headline {
-    grid-column: 1;
-  }
-
-  .what__answer {
-    grid-column: 1/4;
-  }
-}
-
-@media (orientation: landscape) {
   .what__headline {
     grid-column: 1/2;
   }
 
-  .what__answer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  .what__subheadline {
+    grid-column: 1/3;
   }
-  
+}
+
+@media (orientation: landscape) {
+  .what {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .what__headline {
+    grid-row: 1;
+  }
+
+  .what__subheadline {
+    grid-row: 2;
+  }
+
   .what__subheadline:nth-of-type(1) {
     grid-column: 1;
   }
@@ -272,10 +269,10 @@
 }
 
 .how {
-  padding-block-start: 40px;
+  padding-block-start: 50px;
   display: grid;
   grid-template-rows: repeat(2 min-content);
-  gap: 10px;
+  gap: 20px;
 }
 
 .how__headline {
@@ -284,12 +281,15 @@
 
 .how__answer {
   grid-row: 2;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, min-content);
+  gap: 20px;
 }
 
 @media (width > 500px) {
   .how {
-    padding-block-start: 60px;
-    grid-template-columns: repeat(3, 1fr);
+    padding-block-start: 80px;
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
   }
 
@@ -299,6 +299,16 @@
   
   .how__answer {
     grid-row: 1;
+    grid-column: 2;
+  }
+}
+
+@media (orientation: landscape) {
+  .how {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .how__answer {
     grid-column: 2/4;
   }
 }
@@ -310,36 +320,25 @@
   font-style: normal;
   font-weight: 700;
   line-height: 130%;
-  margin-block-start: 10px;
   margin-block-end: 10px;
 }
 
-@media (width > 500px) {
-  .content__subheadline {
-    margin-block-start: 0;
-  }
+.how .content__subheadline {
+  margin-block-end: 0;
 }
 
 .content-paragraph {
+  display: flex;
   color: var(--color);
+  font-size: 18px;
+  letter-spacing: normal;
   font-weight: 400;
   line-height: 130%;
-  margin-block-end: 10px;
 }
 
-.what .content-paragraph {
-  display: flex;
-}
-
-@media (width > 500px) {
-  .content-paragraph {
-     margin-block-end: 20px;
-  }
-
-  .how__card .content-paragraph {
-    margin-block-end: 10px;
-  }
-}
+.why .content-paragraph {
+  display: inline-block; /*при использовании флекса ссылка рассматривается как отдельный флекс-элемент, верстка параграфа меняется и не соответствует макету*/ 
+} 
 
 .content__paragraph-link {
   -webkit-appearance: none;
@@ -373,22 +372,13 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 130%;
-  margin: 10px 0;
+  margin-block-end: 10px;
 }
 
-@media (width > 500px) {
-  .content__sub-subheadline {
-    margin-block-start: 0;
-  }
-
-  .content__sub-subheadline:first-of-type {
-    margin-block-start: 10px;
-  }
-}  
 
 .illustration__subheadline {
   width: 100%;
-  margin-block-start: 40px;
+  margin-block-start: 50px;
   margin-block-end: 10px;
   font-size: 18px;
   font-weight: 700;
@@ -417,7 +407,7 @@
 @media(width > 500px) {
   .illustration__subheadline {
     display: block;
-    margin-block-start: 70px;
+    margin-block-start: 80px;
     margin-block-end: 20px;
   }
 }
