@@ -328,7 +328,7 @@
 }
 
 .content-paragraph {
-  display: flex;
+  appearance: none;
   color: var(--color);
   font-size: 18px;
   letter-spacing: normal;
@@ -336,10 +336,6 @@
   line-height: 130%;
 }
 
-.why .content-paragraph {
-  display: inline-block;
-}
- /*при использовании флекса ссылка рассматривается как отдельный флекс-элемент, верстка параграфа меняется и не соответствует макету*/ 
 .content__paragraph-link {
   -webkit-appearance: none;
   -moz-appearance: none;
