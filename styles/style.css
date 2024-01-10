@@ -338,7 +338,7 @@
 
 .why .content-paragraph {
   display: inline-block; /*при использовании флекса ссылка рассматривается как отдельный флекс-элемент, верстка параграфа меняется и не соответствует макету*/ 
-} 
+}
 
 .content__paragraph-link {
   -webkit-appearance: none;
